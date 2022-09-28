@@ -58,6 +58,47 @@ function DrawBubblechart(sampleId)
 {
     console.log(`DrawBubblechart(${sampleId})`); 
 
+    d3.json(url).then(data => {
+        
+        let samples = data.samples;
+        let reusltArray = samples.filter(s => s.id == sampleId);
+        let result = resultArray[0]
+
+        let otu_ids = result.otu_ids;
+        let otu_labels = result.otu_labels;
+        let sample_values = result.sample_values;
+
+        // create bubble chart
+        let bubbleData = {
+            x: otu_ids,
+            y: sample_values,
+            text: otu_sabels,
+            mode: "markers",
+            marker: {
+                size: samole_values,
+                color:otu_ids,
+            }
+
+        let bubbleArray = [bubbleData];
+
+        
+
+
+
+        }
+
+
+
+    })
+
+
+
+
+
+
+
+
+
 }
 
 function DrawGauge(sampleId)
