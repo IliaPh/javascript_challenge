@@ -1,5 +1,5 @@
 
-// // The code below was provided by Dom's Tutorial for Homework-14
+// // The code below was mainly provided by Dom's Tutorial for Homework-14
 
 console.log('This is app.js');
 
@@ -38,7 +38,7 @@ function DrawBargraph(sampleId)
 
         // Create a layout object
         let barLayout = {
-            title: `Top 10 Bacteria for Cultures Found`
+            title: `Top 10 Bacteria for Cultures`
     
         }
         //  Create the plot
@@ -87,7 +87,7 @@ function DrawBubblechart(sampleId)
 
         };
 
-        // Call Plotly
+        // Plotly
         Plotly.newPlot("bubble", bubbleArray, bubbleLayout)
 
     });
@@ -108,13 +108,11 @@ function ShowMetadata(sampleId)
             
         let otu_ids = result.otu_ids;
         let otu_labels = result.otu_labels;
-        let sample_values = result.sample_values;
-    
+        let sample_values = result.sample_values;    
  
         });
 
 }
-
 
 function optionChanged(sampleId) 
 {
@@ -124,6 +122,7 @@ function optionChanged(sampleId)
     DrawBubblechart(sampleId);
     ShowMetadata(sampleId);
 }
+
 
 function InitDashboard()
 {
